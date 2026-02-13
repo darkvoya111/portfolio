@@ -182,7 +182,14 @@ export const EDUCATION = {
   year: "2018",
 } as const;
 
-export const PROJECTS = [
+export type ProjectEntry = {
+  title: string;
+  description: string;
+  image: string;
+  link?: string;
+};
+
+export const PROJECTS: ProjectEntry[] = [
   {
     title: "GenAI-Powered CRM Workflows",
     description:
@@ -201,7 +208,7 @@ export const PROJECTS = [
       "Designed scalable serverless AI pipelines with AWS Lambda, Step Functions, and API Gateway (60% cost reduction). Model versioning, CI/CD, and retraining with SageMaker, Kubeflow, MLflow, and Airflow; monitoring with Prometheus and Grafana for drift, latency, and fairness.",
     image: "/projects/project-3.png",
   },
-] as const;
+];
 
 export const FOOTER_DATA = [
   {
